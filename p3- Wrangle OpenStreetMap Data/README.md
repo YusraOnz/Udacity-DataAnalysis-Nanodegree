@@ -10,6 +10,7 @@ Riyadh, Saudi Arabia
 Riyadh is the capital of Saudi Arabia. It's located at the center of the Arabian Peninsula. It is close to my homeland and a city that i often visit. The spoken languange in Riyadh is Arabic which is my first language. Hence, I was interested to learn more about it and use my culture and domain knowledge to contribute to this area.
 
 <hr>
+
 ### Data Inspection
 audit.py
 
@@ -236,6 +237,7 @@ streetName = ' '.join(streetName)
 
 
 <hr>
+
 ## Database Creation and Data Overview
 
 In this step, a database is created programatically from the extrcated CSV files. I queried this database to extract some statistics and get an overview of the data. The `csv_to_db.py` contains the code used to accomplish this step. The following are the information and statistical overview extracted from the databas.
@@ -381,12 +383,14 @@ def query(var,top):
 
 
 <hr>
+
 ## Conclusion
  
 
 The Riyadh OSM was and still is full of problems possibly due to the fact that the map is created by volunteers. The major problem found in this region was language inconsistencies as both Arabic and English are used alternatively. To meet with the project scope, I worked to solve some of the problems which are street types, names case and phone numbers inconsistencies. One of the challenges I faced is to find easy and programatical ways to clean unstructured problems. For example, Riyadh's street names and places don't have a unified format or structure like some other countries does.Hence, cleaning it programatically is a big challenge. Moreover, there is a huge room of improvement and future work. For example, knowing that OSM attribute names are predefined, errors attribute names can be detected by comparing it to the list of the predefined attributes. This list is actually extracted and published in the internet. A possible difficulty with this solution is to optimize the code in terms of running time since the number of comarision needed is large.  Another possible improvement is to utilize the high accuracy of google translate API in detecting language type, misspeled words and words translation to resolve language inconsistencied. PyEnchant API can also be used to find missplellings while fuzzywuzzy API can be used to correct such word. The issue with this solution is that NLP API's are not 100% accurate and result in errors itself. However, this solution might not eliminate the problem, but it greatly reduces it.
 
 <hr>
+
 ## References
 
 - Udacity Data Wrangling Course and Discussion Board
